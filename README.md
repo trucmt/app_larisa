@@ -1,2 +1,2 @@
 # larisa
-dự án larisa
+Larisa mobile app
