@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ LibreAV - Anti-malware for Android using machine learning
+  ~ Copyright (C) 2020 Project Matris
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/nav_main_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_scan_apk"
+            android:icon="@drawable/ic_menu_android_black"
+            android:title="@string/scan_apk" />
+        <item
+            android:id="@+id/nav_custom_scan"
+            android:icon="@drawable/ic_menu_custom_scan_black"
+            android:title="@string/custom_scan" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings_black"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help_black"
+            android:title="@string/help" />
+    </group>
+
+    <group android:id="@+id/nav_extra_group"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_info_black"
+            android:title="@string/about" />
+        <item
+            android:id="@+id/nav_bug_report"
+            android:icon="@drawable/ic_menu_bug_report_black"
+            android:title="@string/report_a_bug" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_sponsor"
+            android:icon="@drawable/ic_menu_sponsor"
+            android:title="@string/sponsor" />
+    </group>
+
+</menu>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_background"
+    android:orientation="vertical"
+    tools:context="tech.projectmatris.antimalwareapp.activities.AppDetails">
+    <LinearLayout
+        android:id="@+id/app_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_margin="10dp">
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/appIcon"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_list_generic"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/sample_text"
+                android:textColor="@color/secondaryTextColor" />
+
+
+                <TextView
+                    android:id="@+id/app_package"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:text="@string/sample_text"
+                    android:textColor="@color/secondaryTextColor" />
+
+
+            <TextView
+                android:id="@+id/app_prediction_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/sample_text"
+                android:textColor="@color/secondaryTextColor" />
+
+            <TextView
+                android:id="@+id/app_prediction_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/sample_text" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/uninstallButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="#FFCC0000"
+            android:text="@string/uninstall"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sha256_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_info"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/sha256_hash"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="16sp" />
+
+    <HorizontalScrollView
+        android:id="@+id/sha256_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sha256_label"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="2dp"
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/app_background" >
+
+        <TextView
+            android:id="@+id/sha256_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/sample_text"
+            android:textColor="@color/secondaryTextColor"
+            android:textIsSelectable="true"
+            android:maxLines="1"
+            android:scrollHorizontally="true" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/permissions_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sha256_container"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/permission_list"
+        android:textSize="16sp"
+        android:textColor="@color/secondaryTextColor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/permission_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_wrapper"
+        android:layout_below="@id/permissions_list_text"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp" />
+</RelativeLayout>
