@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scanner">
+
+
+
+    <fragment
+        android:id="@+id/scanner"
+        android:name="com.example.larisa.FirstFragment"
+        android:label="HomePage"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/your_apps"/>
+    </fragment>
+    <fragment
+        android:id="@+id/your_apps"
+        android:name="com.example.larisa.SecondFragment"
+        android:label="Your apps"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/scanner" />
+    </fragment>
+
+
+</navigation>
