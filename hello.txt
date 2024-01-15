@@ -1,1 +1,10 @@
 hello
+
+Machine learning: F-Droid 
+F-Droid is both a repository of verified free software Android apps as well as a whole “app store kit”, providing all the tools needed to setup and run an app store. It is a community-run free software project developed by a wide range of contributors. It also includes complete build and release tools for managing the process of turning app source code into published builds.
+
+Features:
+Real time scanning
+On device inference
+Lightweight
+100% free and no ads
