@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/nav_main_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_scan_apk"
+            android:title="@string/scan_apk" />
+        <item
+            android:id="@+id/nav_custom_scan"
+            android:title="Custom Scan" />
+        <item
+            android:id="@+id/nav_policy"
+            android:title="Policy" />
+        <item
+            android:id="@+id/nav_web"
+            android:title="Contact" />
+        <item
+            android:id="@+id/nav_out"
+            android:title="Log Out" />
+    </group>
+</menu>
